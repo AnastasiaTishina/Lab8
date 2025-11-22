@@ -12,9 +12,6 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Verify Dockerfile
-      run: ls -l Dockerfile
-
     - name: Trigger Render Deployment
       run: |
         curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
